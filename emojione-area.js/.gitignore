@@ -1,0 +1,7 @@
+.idea
+.sass-cache
+test
+vendor
+composer.lock
+composer.json
+config.rb
