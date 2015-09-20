@@ -395,10 +395,8 @@
             .replace(/<img[^>]*alt="([^"]+)"[^>]*>/ig, '$1')
             .replace(/\n|\r/g, '')
             .replace(/<br[^>]*>/ig, '\n')
-            .replace(/(?:<div[^>]*>)+/ig, '<div>')
-            .replace(/(?:<\/div>)+/ig, '</div>')
-            .replace(/(?:<p[^>]*>)+/ig, '<div>')
-            .replace(/(?:<\/p>)+/ig, '</div>')
+            .replace(/(?:<(?:div|p|ol|ul|li|pre|code|object)[^>]*>)+/ig, '<div>')
+            .replace(/(?:<\/(?:div|p|ol|ul|li|pre|code|object)>)+/ig, '</div>')
             .replace(/\n<div><\/div>/ig, '\n')
             .replace(/<div><\/div>\n/ig, '\n')
             .replace(/(?:<div>)+<\/div>/ig, '\n')
@@ -583,7 +581,7 @@
                 setTimeout($.proxy(function() {
                     element.attr("contenteditable", "true").focus();
                     restoreSelection(element[0], sel);
-                    pasteHtmlAtCaret(htmlFromText(textFromHtml(clipboard.html())));
+                    pasteHtmlAtCaret(htmlFromText(textFromHtml(clipboard.html().replace(/\r\n|\n|\r/g, '<br>'))));
                     pasteHtmlAtCaret('<span id="' + UID +'-caret"></span>');
                     doc.scrollTop(docScrollTop);
                     element.scrollTop(editorScrollTop);
