@@ -15,7 +15,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="lib/emojione/lib/js/emojione.min.js"></script>
-    <script type="text/javascript" src="lib/emojione-area//js/emojione-area.min.js"></script>
+    <script type="text/javascript" src="lib/emojione-area//js/emojione-area.js"></script>
 
     <link rel="shortcut icon" href="images/favicon.ico"/>
   </head>
@@ -53,7 +53,19 @@
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
 <p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-<h2>Examples</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2>Examples</h2>
 
 <textarea id="example1">
 Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
@@ -64,7 +76,69 @@ Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do e
     $("#example1").emojioneArea();
   });
 </script>
+
 <p></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">textarea</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>example1<span class="pl-pds">"</span></span>&gt;
+Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
+&lt;/<span class="pl-ent">textarea</span>&gt;
+
+<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">  $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>() {</span>
+<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">"</span>#example1<span class="pl-pds">"</span></span>).emojioneArea();</span>
+<span class="pl-s1">  });</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+
+
+<div id="example2">
+Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#example2").emojioneArea();
+  });
+</script>
+
+<p></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>example2<span class="pl-pds">"</span></span>&gt;
+Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
+&lt;/<span class="pl-ent">div</span>&gt;
+
+<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">  $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>() {</span>
+<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">"</span>#example2<span class="pl-pds">"</span></span>).emojioneArea();</span>
+<span class="pl-s1">  });</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+
+
+
+<input id="example3" value="Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.">
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#example3").emojioneArea();
+  });
+</script>
+
+<p></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">input</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>example3<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.<span class="pl-pds">"</span></span>&gt;
+
+<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">  $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>() {</span>
+<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">"</span>#example3<span class="pl-pds">"</span></span>).emojioneArea();</span>
+<span class="pl-s1">  });</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+
+
+
+
+
 
 
 <h3>
