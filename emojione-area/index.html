@@ -12,14 +12,21 @@
     <link rel="stylesheet" type="text/css" href="lib/emojione/assets/sprites/emojione.sprites.css" media="screen">
     <link rel="stylesheet" type="text/css" href="lib/emojione-area/css/emojione-area.css" media="screen">
     <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="lib/google-code-prettify/skins/tomorrow.css" media="screen">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/google-code-prettify/prettify.js"></script>
     <script type="text/javascript" src="lib/emojione/lib/js/emojione.min.js"></script>
     <script type="text/javascript" src="lib/emojione-area//js/emojione-area.js"></script>
 
     <link rel="shortcut icon" href="images/favicon.ico"/>
+    <!--<script type="text/javascript">-->
+      <!--$(document).ready(function() {-->
+        <!--prettyPrint();-->
+      <!--});-->
+    <!--</script>-->
   </head>
-  <body>
+  <body onload="prettyPrint()">
     <section class="page-header">
       <a href="/emojione-area.js/">
         <h1 class="logo">Emojione-area</h1>
@@ -79,17 +86,19 @@ Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do e
 
 <p></p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">textarea</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>example1<span class="pl-pds">"</span></span>&gt;
+<pre class="prettyprint linenums">
+&lt;textarea id=&quot;example1&quot;&gt;
 Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
-&lt;/<span class="pl-ent">textarea</span>&gt;
+&lt;/textarea&gt;
 
-<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
-<span class="pl-s1">  $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>() {</span>
-<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">"</span>#example1<span class="pl-pds">"</span></span>).emojioneArea();</span>
-<span class="pl-s1">  });</span>
-<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(document).ready(function() {
+    $(&quot;#example1&quot;).emojioneArea();
+  });
+&lt;/script&gt;
+</pre>
 
-
+<p></p>
 
 <div id="example2">
 Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
@@ -103,18 +112,19 @@ Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do e
 
 <p></p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>example2<span class="pl-pds">"</span></span>&gt;
+<pre class="prettyprint linenums">
+&lt;div id=&quot;example2&quot;&gt;
 Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
-&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/div&gt;
 
-<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
-<span class="pl-s1">  $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>() {</span>
-<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">"</span>#example2<span class="pl-pds">"</span></span>).emojioneArea();</span>
-<span class="pl-s1">  });</span>
-<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(document).ready(function() {
+    $(&quot;#example2&quot;).emojioneArea();
+  });
+&lt;/script&gt;
+</pre>
 
-
-
+<p></p>
 
 <input id="example3" value="Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.">
 
@@ -126,16 +136,16 @@ Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do e
 
 <p></p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">input</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>example3<span class="pl-pds">"</span></span> <span class="pl-e">value</span>=<span class="pl-s"><span class="pl-pds">"</span>Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.<span class="pl-pds">"</span></span>&gt;
 
-<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
-<span class="pl-s1">  $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>() {</span>
-<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">"</span>#example3<span class="pl-pds">"</span></span>).emojioneArea();</span>
-<span class="pl-s1">  });</span>
-<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+<pre class="prettyprint linenums:1">
+&lt;input id=&quot;example3&quot; value=&quot;Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.&quot;&gt;
 
-
-
+&lt;script type=&quot;text/javascript&quot;&gt;
+  $(document).ready(function() {
+    $(&quot;#example3&quot;).emojioneArea();
+  });
+&lt;/script&gt;
+</pre>
 
 
 
