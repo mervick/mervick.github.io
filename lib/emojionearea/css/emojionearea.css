@@ -1,4 +1,4 @@
-/* line 3, ../scss/emojione-area.scss */
+/* line 3, ../scss/emojionearea.scss */
 .emojionearea {
   display: block;
   width: 100%;
@@ -23,7 +23,7 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-/* line 18, ../scss/emojione-area.scss */
+/* line 18, ../scss/emojionearea.scss */
 .emojionearea.focused {
   border-color: #66afe9;
   outline: 0;
@@ -31,7 +31,7 @@
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-/* line 24, ../scss/emojione-area.scss */
+/* line 24, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-editor {
   display: block;
   -moz-box-sizing: border-box;
@@ -56,17 +56,12 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 41, ../scss/emojione-area.scss */
+/* line 41, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-editor:empty:before {
   content: attr(placeholder);
   display: block;
 }
-/* line 45, ../scss/emojione-area.scss */
-.emojionearea .emojionearea-editor .placeholder-fix:first-child:empty:before {
-  content: attr(placeholder);
-  display: block;
-}
-/* line 49, ../scss/emojione-area.scss */
+/* line 45, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-editor:focus {
   border: 0;
   outline: 0;
@@ -74,7 +69,7 @@
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 55, ../scss/emojione-area.scss */
+/* line 51, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-editor .emojione {
   font-size: inherit;
   height: 2ex;
@@ -87,16 +82,18 @@
   vertical-align: middle;
   max-width: 100%;
 }
-/* line 69, ../scss/emojione-area.scss */
+/* line 65, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-filters {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: #e5e5e5;
   width: 100%;
-  height: auto;
+  height: 46px;
+  position: relative;
+  overflow: hidden;
 }
-/* line 74, ../scss/emojione-area.scss */
+/* line 73, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-filters .emojionearea-filter {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -115,29 +112,125 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 88, ../scss/emojione-area.scss */
-.emojionearea .emojionearea-filters .emojionearea-filter span {
+/* line 88, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter i, .emojionearea .emojionearea-filters .emojionearea-filter img {
   display: block;
   width: 28px;
   height: 28px;
   top: 0;
   margin: 0;
 }
-/* line 95, ../scss/emojione-area.scss */
+/* line 96, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-filters .emojionearea-filter:hover {
   background-color: #f2f2f2;
   border-color: #f2f2f2;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
-/* line 100, ../scss/emojione-area.scss */
+/* line 102, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-filters .emojionearea-filter.active {
   background-color: #f9f9f9;
   border-color: #f9f9f9;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-/* line 108, ../scss/emojione-area.scss */
+/* line 109, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filters-scroll {
+  height: 46px;
+  overflow: hidden;
+  width: 10000%;
+  display: block;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  -moz-transition: left 0.25s ease-in-out;
+  -o-transition: left 0.25s ease-in-out;
+  -webkit-transition: left 0.25s ease-in-out;
+  transition: left 0.25s ease-in-out;
+}
+/* line 120, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-left,
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-right {
+  display: block;
+  width: 22px;
+  height: 46px;
+  position: absolute;
+  top: 0;
+  -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  background: #e5e5e5;
+  z-index: 1;
+}
+/* line 131, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-left:hover,
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-right:hover {
+  background: #f2f2f2;
+}
+/* line 135, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-left:after,
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-right:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0;
+  border-color: transparent;
+  position: absolute;
+  top: 18px;
+}
+/* line 146, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-left.disabled,
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-right.disabled {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 151, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-left {
+  -moz-transition: left 0.15s ease-in-out;
+  -o-transition: left 0.15s ease-in-out;
+  -webkit-transition: left 0.15s ease-in-out;
+  transition: left 0.15s ease-in-out;
+  left: -30px;
+  border-right: 1px solid #c9c9c9;
+}
+/* line 155, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-left:after {
+  left: 6px;
+  border-right: 8px solid #333;
+}
+/* line 159, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-left.disabled:after {
+  border-right-color: #aaa;
+}
+/* line 164, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-right {
+  -moz-transition: right 0.15s ease-in-out;
+  -o-transition: right 0.15s ease-in-out;
+  -webkit-transition: right 0.15s ease-in-out;
+  transition: right 0.15s ease-in-out;
+  right: -30px;
+  border-left: 1px solid #c9c9c9;
+}
+/* line 168, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-right:after {
+  right: 6px;
+  border-left: 8px solid #333;
+}
+/* line 172, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-filters .emojionearea-filter-arrow-right.disabled:after {
+  border-left-color: #aaa;
+}
+/* line 179, ../scss/emojionearea.scss */
+.emojionearea.focused .emojionearea-filters .emojionearea-filter-arrow-left.active {
+  left: 0;
+}
+/* line 183, ../scss/emojionearea.scss */
+.emojionearea.focused .emojionearea-filters .emojionearea-filter-arrow-right.active {
+  right: 0;
+}
+/* line 188, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-tabs {
   padding: 0;
   background: #f9f9f9;
@@ -145,7 +238,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 112, ../scss/emojione-area.scss */
+/* line 192, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-tabs [class*=emojione-] {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -155,16 +248,16 @@
   height: 24px;
   top: 0;
 }
-/* line 119, ../scss/emojione-area.scss */
+/* line 199, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-tabs .emojionearea-tab {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 4px 10px;
+  padding: 4px 4px 4px 10px;
   max-height: 136px;
   overflow: auto;
 }
-/* line 124, ../scss/emojione-area.scss */
+/* line 204, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-tabs .emojionearea-tab .emojibtn {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -175,7 +268,7 @@
   margin: 1px;
   padding: 3px;
 }
-/* line 131, ../scss/emojione-area.scss */
+/* line 211, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-tabs .emojionearea-tab .emojibtn:hover {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -183,7 +276,13 @@
   background-color: #e4e4e4;
   cursor: pointer;
 }
-/* line 140, ../scss/emojione-area.scss */
+/* line 216, ../scss/emojionearea.scss */
+.emojionearea .emojionearea-tabs .emojionearea-tab .emojibtn i, .emojionearea .emojionearea-tabs .emojionearea-tab .emojibtn img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+/* line 225, ../scss/emojionearea.scss */
 .emojionearea .emojionearea-editor + .emojionearea-filters,
 .emojionearea .emojionearea-editor + .emojionearea-tabs,
 .emojionearea .emojionearea-filters + .emojionearea-editor,
