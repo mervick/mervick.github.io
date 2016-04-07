@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Emojione-area by mervick</title>
+    <title>Emojione-area — WYSIWYG-like EmojiOne Converter / Picker Plugin for jQuery by mervick</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -41,9 +41,9 @@
 
     <h2>Emoji One Area</h2>
 
-    <p>Emojione-area is a small jQuery plugin that allows you to transform any html element into simple WYSIWYG editor
-      with ability to use Emojione icons. The end result is a secure text/plain in which the image icons will be replaced
-      with their Unicode analogues.</p>
+    <p>Emojione-area is a small jQuery plugin that allows you to transform any html element into simple WYSIWYG-like editor
+      with ability to use Emojione emojis. The end result is a secure text/plain in which the image emojis will be replaced
+      with their Unicode analogues or shortnames (depending on options).</p>
 
 
     <h2 id="demo"><a href="#demo">Demo</a></h2>
@@ -147,6 +147,8 @@ Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do e
       autoHideFilters   : false, // auto hide filters panel
 
       useSprite         : true, // use sprite instead of images, is awesome, but not works in old browsers
+      shortnames        : false, // if true - will converts emojis to short names,
+                                 // by default converts emojis to unicode characters
 
       filters: {
         // customize filters & emoji buttons
